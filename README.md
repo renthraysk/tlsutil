@@ -1,6 +1,6 @@
 # tlsutil
 
-Example creating a tls.Config
+Example of creating a tls.Config
 
 ```
     cfg := NewTLSConfig(WithTLS12(),
