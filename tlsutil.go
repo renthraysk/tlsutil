@@ -23,6 +23,12 @@ func Wrap(opts ...Option) Option {
 	}
 }
 
+func WithError(err error) Option {
+	return func(cfg *tls.Config) error {
+		return err
+	}
+}
+
 // WithKeyPair load a certificate from a certFile, keyFile pair, and append to tls.Config's Certificates
 func WithKeyPair(certFile, keyFile string) Option {
 	return func(cfg *tls.Config) error {
